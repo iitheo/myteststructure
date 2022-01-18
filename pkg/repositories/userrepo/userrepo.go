@@ -8,7 +8,7 @@ func init() {
 	mapOfUsers["theo@yahoo.com"] = usermodel.Users{
 		Username: "theo",
 		Email:    "theo@yahoo.com",
-		Password: "hello",
+		Password: "hello1",
 	}
 
 	mapOfUsers["john@gmail.com"] = usermodel.Users{

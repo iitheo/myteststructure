@@ -8,6 +8,9 @@ import (
 )
 
 func ValidateUser(userData *usermodel.Users) (myErr error) {
+	if (userData.Email == "") || (userData.Username == "") || !(len(userData.Password) >= 6 && len(userData.Password) <= 120) {
+		return errors.New("Password must be between 6 and 120. Email and Username are required")
+	}
 	listOfUsers := userrepo.UserRepo()
 	//check for duplicate usernames
 	if _, ok := listOfUsers[userData.Email]; ok {
